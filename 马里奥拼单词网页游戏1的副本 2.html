@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Style Spelling Challenge</title>
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #5c94fc;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        @font-face {
+            font-family: 'Press Start 2P';
+            src: url('data:application/font-woff2;charset=utf-8;base64,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') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* 添加Century Gothic字体 */
+        .english-text {
+            font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+        }
+
+        .game-container {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .game-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 0 #000;
+            letter-spacing: 2px;
+        }
+
+        .word-display {
+            position: relative;
+            margin: 20px 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .chinese-hint {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 0 #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sound-icon {
+            cursor: pointer;
+            font-size: 1.5rem;
+            margin-left: 10px;
+            color: #FFD700;
+            text-shadow: 1px 1px 0 #000;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 5px;
+            border-radius: 50%;
+            display: inline-flex;
+            transition: transform 0.2s;
+        }
+
+        .sound-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .letter-slots {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .letter-slot {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border: 2px solid #333;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+            box-shadow: 2px 2px 0 #333;
+        }
+
+        .letter-bank {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .letter {
+            width: 50px;
+            height: 50px;
+            background-color: #FFCB05;
+            border: 2px solid #333;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            box-shadow: 2px 2px 0 #333;
+            transition: transform 0.1s;
+        }
+
+        .letter:hover {
+            transform: scale(1.05);
+            background-color: #FFD700;
+        }
+
+        .letter.used {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background-color: #333;
+            border-radius: 15px;
+            margin: 20px 0;
+            position: relative;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: #E60012;
+            border-radius: 15px;
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        .progress-text {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #E60012;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: 'Press Start 2P', cursive, sans-serif;
+            cursor: pointer;
+            font-size: 0.9rem;
+            box-shadow: 3px 3px 0 #333;
+            transition: transform 0.1s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background-color: #FF3333;
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+            box-shadow: 1px 1px 0 #333;
+        }
+
+        .feedback {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            height: 30px;
+            color: #FFD700;
+            text-shadow: 1px 1px 0 #000;
+        }
+
+        /* 数据输入区域 */
+        .data-input-section {
+            width: 100%;
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .data-input-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .data-input-toggle {
+            font-size: 1.2rem;
+            color: #FFD700;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .data-input-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .data-input-columns {
+            display: flex;
+            gap: 10px;
+        }
+
+        .data-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .column-header {
+            font-size: 0.9rem;
+            color: #FFD700;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .data-textarea {
+            height: 200px;
+            padding: 8px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            font-family: inherit;
+            background-color: rgba(255, 255, 255, 0.7);
+            resize: none;
+        }
+
+        .add-words-btn {
+            background-color: #00AA00;
+            margin-top: 10px;
+            align-self: center;
+        }
+
+        /* 马里奥风格装饰 */
+        .mario-pipe {
+            position: absolute;
+            width: 70px;
+            height: 60px;
+            background-color: #00AA00;
+            border: 3px solid #000;
+            border-radius: 10px 10px 0 0;
+            z-index: -1;
+        }
+        
+        .mario-pipe.left {
+            left: -20px;
+            bottom: 20px;
+            transform: rotate(-30deg);
+        }
+        
+        .mario-pipe.right {
+            right: -20px;
+            bottom: 40px;
+            transform: rotate(30deg);
+        }
+        
+        .cloud {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            z-index: -1;
+        }
+        
+        .coin {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: #FFD700;
+            border-radius: 50%;
+            border: 2px solid #000;
+            z-index: -1;
+            animation: spin 3s infinite linear;
+        }
+
+        .mushroom {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #E60012;
+            border-radius: 50% 50% 30% 30%;
+            border: 2px solid #000;
+            z-index: -1;
+        }
+
+        .mushroom::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            top: 5px;
+            left: 5px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotateY(0deg); opacity: 1; }
+            50% { transform: rotateY(90deg); opacity: 0.5; }
+            100% { transform: rotateY(0deg); opacity: 1; }
+        }
+
+        /* 胜利动画 */
+        .win-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+            display: none;
+        }
+        
+        .firework {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #ffeb3b;
+            box-shadow: 0 0 10px 5px rgba(255, 235, 59, 0.7);
+        }
+
+        .brick {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #C95E00;
+            border: 2px solid #000;
+            z-index: -1;
+        }
+
+        .brick::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            background-color: #8B4513;
+            bottom: 0;
+        }
+
+        .mario-character {
+            position: absolute;
+            width: 30px;
+            height: 40px;
+            background-color: #E60012;
+            border: 2px solid #000;
+            z-index: -1;
+            bottom: 10px;
+            animation: jump 2s infinite ease-in-out;
+        }
+
+        .mario-character::before {
+            content: "";
+            position: absolute;
+            width: 60%;
+            height: 30%;
+            background-color: #FFD700;
+            top: -10%;
+            left: 20%;
+            border: 2px solid #000;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .question-block {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #FFD700;
+            border: 2px solid #000;
+            z-index: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            animation: float 2s infinite ease-in-out;
+        }
+
+        .piranha-plant {
+            position: absolute;
+            width: 30px;
+            height: 50px;
+            background-color: #0f0;
+            border: 2px solid #000;
+            z-index: -1;
+            border-radius: 30% 30% 0 0;
+            animation: piranha 4s infinite ease-in-out;
+        }
+
+        .piranha-plant::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            top: 5px;
+            left: 5px;
+        }
+
+        @keyframes jump {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+
+        @keyframes piranha {
+            0%, 100% { height: 30px; }
+            50% { height: 60px; }
+        }
+
+        @media (max-width: 480px) {
+            .game-title {
+                font-size: 1.8rem;
+            }
+            .letter-slot, .letter {
+                width: 40px;
+                height: 40px;
+                font-size: 1.4rem;
+            }
+            .chinese-hint {
+                font-size: 1.5rem;
+            }
+            .btn {
+                font-size: 0.8rem;
+                padding: 8px 15px;
+            }
+            .data-input-columns {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="mario-pipe left"></div>
+        <div class="mario-pipe right"></div>
+        
+        <h1 class="game-title">Spelling Challenge</h1>
+        
+        <div class="word-display">
+            <div class="chinese-hint">
+                <span id="chinese-hint">Click to start</span>
+                <div class="sound-icon" id="sound-btn">🔊</div>
+            </div>
+            <div class="letter-slots" id="letter-slots"></div>
+        </div>
+        
+        <div class="letter-bank" id="letter-bank"></div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+            <div class="progress-text" id="progress-text">0/10</div>
+        </div>
+        
+        <div class="feedback" id="feedback"></div>
+        
+        <div class="controls">
+            <button class="btn" id="check-btn">Check</button>
+            <button class="btn" id="retry-btn">Retry</button>
+            <button class="btn" id="next-btn">Next</button>
+            <button class="btn" id="reset-btn">Reset</button>
+        </div>
+        
+        <div class="data-input-section" id="data-input-section">
+            <div class="data-input-header" id="data-input-header">
+                <span>Teacher's Word Input</span>
+                <span class="data-input-toggle" id="data-input-toggle">▼</span>
+            </div>
+            <div class="data-input-content" id="data-input-content">
+                <div class="data-input-columns">
+                    <div class="data-column">
+                        <div class="column-header">English Words (one per line)</div>
+                        <textarea class="data-textarea english-text" id="english-input" placeholder="apple
+banana
+cat
+dog"></textarea>
+                    </div>
+                    <div class="data-column">
+                        <div class="column-header">Chinese Meanings (one per line)</div>
+                        <textarea class="data-textarea" id="chinese-input" placeholder="苹果
+香蕉
+猫
+狗"></textarea>
+                    </div>
+                </div>
+                <button class="btn add-words-btn" id="add-words-btn">Add All Words</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="win-animation" id="win-animation"></div>
+
+    <script>
+        // 单词数据库
+        const wordDatabase = [
+            { chinese: '苹果', english: 'apple' },
+            { chinese: '香蕉', english: 'banana' },
+            { chinese: '猫', english: 'cat' },
+            { chinese: '狗', english: 'dog' },
+            { chinese: '大象', english: 'elephant' },
+            { chinese: '鱼', english: 'fish' },
+            { chinese: '长颈鹿', english: 'giraffe' },
+            { chinese: '房子', english: 'house' },
+            { chinese: '冰淇淋', english: 'icecream' },
+            { chinese: '帽子', english: 'hat' },
+            { chinese: '笔', english: 'pen' },
+            { chinese: '书', english: 'book' },
+            { chinese: '电脑', english: 'computer' },
+            { chinese: '学校', english: 'school' },
+            { chinese: '朋友', english: 'friend' },
+            { chinese: '水', english: 'water' },
+            { chinese: '老师', english: 'teacher' },
+            { chinese: '月亮', english: 'moon' },
+            { chinese: '太阳', english: 'sun' },
+            { chinese: '星星', english: 'star' }
+        ];
+
+        // 音效资源
+        const correctSound = new Audio("data:audio/wav;base64,//uQRAAAAWMSLwUIYAAsYkXgoQwAEaYLWfkWgAI0wWs/ItAAAGDgYtAgAyN+QWaAAihwMWm4G8QQRDiMcCBcH3Cc+CDv/7xA4Tvh9Rz/y8QADBwMWgQAZG/ILNAARQ4GLTcDeIIIhxGOBAuD7hOfBB3/94gcJ3w+o5/5eIAIAAAVwWgQAVQ2ORaIQwEMAJiDg95G4nQL7mQVWI6GwRcfsZAcsKkJvxgxEjzFUgfHoSQ9Qq7KNwqHwuB13MA4a1q/DmBrHgPcmjiGoh//EwC5nGPEmS4RcfkVKOhJf+WOgoxJclFz3kgn//dBA+ya1GhurNn8zb//9NNutNuhz31f////9vt///z+IdAEAAAK4LQIAKobHItEIYCGAExBwe8jcToF9zIKrEdDYIuP2MgOWFSE34wYiR5iqQPj0JIeoVdlG4VD4XA67mAcNa1fhzA1jwHuTRxDUQ//iYBczjHiTJcIuPyKlHQkv/LHQUYkuSi57yQT//uggfZNajQ3Vmz+Zt//+mm3Wm3Q576v////+32///5/EOgAAADVghQAAAAA//uQZAUAB1WI0PZugAAAAAoQwAAAEk3nRd2qAAAAACiDgAAAAAAABCqEEQRLCgwpBGMlJkIz8jKhGvj4k6jzRnqasNKIeoh5gI7BJaC1A1AoNBjJgbyApVS4IDlZgDU5WUAxEKDNmmALHzZp0Fkz1FMTmGFl1FMEyodIavcCAUHDWrKAIA4aa2ooVAhQxe2eWENQ4khiIaHmodQIBAg6agaYzZt1Y9GKIIiEwLeK0zSKVXIlQIMXaTSDACmH8HQ+HKVZQUlA+AhLCiQYGZiuPAIQZAN8AgDAEgZ+wRvJfbRh7sAQaUDIEgxgDgQrj1CIdDiQCLgAGACkRfQWEbQKwVmAfKDUaaBDQ+D8A5wC5A+DkOgNkICQY+CkEcA+QUBICAIQB8YAHQQYGRgVHgSkCcgV5g");
+        const wrongSound = new Audio("data:audio/wav;base64,//uQRAAAAWMSLwUIYAAsYkXgoQwAEaYLWfkWgAI0wWs/ItAAAGDgYtAgAyN+QWaAAihwMWm4G8QQRDiMcCBcH3Cc+CDv/7xA4Tvh9Rz/y8QADBwMWgQAZG/ILNAARQ4GLTcDeIIIhxGOBAuD7hOfBB3/94gcJ3w+o5/5eIAIAAAVwWgQAVQ2ORaIQwEMAJiDg95G4nQL7mQVWI6GwRcfsZAcsKkJvxgxEjzFUgfHoSQ9Qq7KNwqHwuB13MA4a1q/DmBrHgPcmjiGoh//EwC5nGPEmS4RcfkVKOhJf+WOgoxJclFz3kgn//dBA+ya1GhurNn8zb//9NNutNuhz31f////9vt///z+IdAEAAAK4LQIAKobHItEIYCGAExBwe8jcToF9zIKrEdDYIuP2MgOWFSE34wYiR5iqQPj0JIeoVdlG4VD4XA67mAcNa1fhzA1jwHuTRxDUQ//iYBczjHiTJcIuPyKlHQkv/LHQUYkuSi57yQT//uggfZNajQ3Vmz+Zt//+mm3Wm3Q576v////+32///5/EOgAAADVghQAAAAA//uQZAUAB1WI0PZugAAAAAoQwAAAEk3nRd2qAAAAACiDgAAAAAAABCqEEQRLCgwpBGMlJkIz8jKhGvj4k6jzRnqasNKIeoh5gI7BJaC1A1AoNBjJgbyApVS4IDlZgDU5WUAxEKDNmmALHzZp0Fkz1FMTmGFl1FMEyodIavcCAUHDWrKAIA4aa2ooVAhQxe2eWENQ4khiIc6Z7M1dOeCVDUW3dKbqYwzPJm6nIprL4S+gGzTEVZl8lmGhtk8ts6f/JqSkeGkw6f5F5PQQAAADVghQAAAAA=");
+
+        // 游戏状态
+        let currentWord = null;
+        let currentLetters = [];
+        let selectedLetterIndices = [];
+        let correctWords = 0;
+        let totalWords = 0;
+        let hasNetworkAccess = true; // 默认有网络
+        let customWords = []; // 自定义单词
+        let usingCustomWords = false; // 是否使用自定义单词
+        let usedWords = []; // 记录已使用的单词，防止重复
+
+        // DOM 元素
+        const chineseHintElement = document.getElementById('chinese-hint');
+        const soundButton = document.getElementById('sound-btn');
+        const letterSlotsElement = document.getElementById('letter-slots');
+        const letterBankElement = document.getElementById('letter-bank');
+        const progressFillElement = document.getElementById('progress-fill');
+        const progressTextElement = document.getElementById('progress-text');
+        const feedbackElement = document.getElementById('feedback');
+        const checkButton = document.getElementById('check-btn');
+        const retryButton = document.getElementById('retry-btn');
+        const nextButton = document.getElementById('next-btn');
+        const resetButton = document.getElementById('reset-btn');
+        const winAnimationElement = document.getElementById('win-animation');
+        
+        // 输入区域元素
+        const dataInputSection = document.getElementById('data-input-section');
+        const dataInputHeader = document.getElementById('data-input-header');
+        const dataInputToggle = document.getElementById('data-input-toggle');
+        const dataInputContent = document.getElementById('data-input-content');
+        const englishInput = document.getElementById('english-input');
+        const chineseInput = document.getElementById('chinese-input');
+        const addWordsButton = document.getElementById('add-words-btn');
+
+        // 检查网络连接
+        function checkNetworkConnection() {
+            hasNetworkAccess = navigator.onLine;
+            return hasNetworkAccess;
+        }
+
+        // 创建马里奥风格的装饰元素
+        function createDecorations() {
+            // 创建云朵
+            for (let i = 0; i < 5; i++) {
+                const cloud = document.createElement('div');
+                cloud.className = 'cloud';
+                cloud.style.width = Math.floor(Math.random() * 100) + 50 + 'px';
+                cloud.style.height = Math.floor(Math.random() * 50) + 30 + 'px';
+                cloud.style.top = Math.floor(Math.random() * 40) + '%';
+                cloud.style.left = Math.floor(Math.random() * 80) + '%';
+                document.body.appendChild(cloud);
+            }
+            
+            // 创建金币
+            for (let i = 0; i < 5; i++) {
+                const coin = document.createElement('div');
+                coin.className = 'coin';
+                coin.style.top = Math.floor(Math.random() * 70) + 10 + '%';
+                coin.style.left = Math.floor(Math.random() * 80) + 10 + '%';
+                document.body.appendChild(coin);
+            }
+            
+            // 创建蘑菇
+            for (let i = 0; i < 2; i++) {
+                const mushroom = document.createElement('div');
+                mushroom.className = 'mushroom';
+                mushroom.style.top = Math.floor(Math.random() * 80) + 10 + '%';
+                mushroom.style.left = Math.floor(Math.random() * 80) + 10 + '%';
+                document.body.appendChild(mushroom);
+            }
+            
+            // 创建砖块
+            for (let i = 0; i < 3; i++) {
+                const brick = document.createElement('div');
+                brick.className = 'brick';
+                brick.style.top = Math.floor(Math.random() * 80) + 10 + '%';
+                brick.style.left = Math.floor(Math.random() * 80) + 10 + '%';
+                document.body.appendChild(brick);
+            }
+            
+            // 添加马里奥角色
+            const mario = document.createElement('div');
+            mario.className = 'mario-character';
+            mario.style.left = Math.floor(Math.random() * 70) + 10 + '%';
+            document.body.appendChild(mario);
+            
+            // 添加问号块
+            const questionBlock = document.createElement('div');
+            questionBlock.className = 'question-block';
+            questionBlock.textContent = '?';
+            questionBlock.style.top = Math.floor(Math.random() * 40) + 5 + '%';
+            questionBlock.style.left = Math.floor(Math.random() * 70) + 15 + '%';
+            document.body.appendChild(questionBlock);
+            
+            // 添加食人花
+            const piranhaPlant = document.createElement('div');
+            piranhaPlant.className = 'piranha-plant';
+            piranhaPlant.style.bottom = Math.floor(Math.random() * 10) + 5 + '%';
+            piranhaPlant.style.left = Math.floor(Math.random() * 80) + 10 + '%';
+            document.body.appendChild(piranhaPlant);
+        }
+
+        // 播放单词发音
+        function playWordSound() {
+            if (!currentWord || !checkNetworkConnection()) {
+                if (!hasNetworkAccess) {
+                    feedbackElement.textContent = "No network connection for pronunciation";
+                    setTimeout(() => {
+                        feedbackElement.textContent = "";
+                    }, 2000);
+                }
+                return;
+            }
+
+            const utterance = new SpeechSynthesisUtterance(currentWord.english);
+            utterance.lang = 'en-US';
+            speechSynthesis.speak(utterance);
+        }
+
+        // 随机选择一个单词（防止重复）
+        function selectRandomWord() {
+            // 决定使用哪个单词库
+            let wordList = usingCustomWords && customWords.length > 0 ? customWords : wordDatabase;
+            
+            // 如果所有单词都用过了，重置已使用单词列表
+            if (usedWords.length >= wordList.length) {
+                usedWords = [];
+            }
+            
+            // 过滤出未使用的单词
+            const availableWords = wordList.filter(word => !usedWords.includes(word.english));
+            
+            // 如果没有可用单词，使用所有单词
+            if (availableWords.length === 0) {
+                usedWords = [];
+                currentWord = wordList[Math.floor(Math.random() * wordList.length)];
+            } else {
+                // 从未使用的单词中随机选择
+                currentWord = availableWords[Math.floor(Math.random() * availableWords.length)];
+            }
+            
+            // 将选择的单词标记为已使用
+            usedWords.push(currentWord.english);
+            
+            // 打乱字母顺序
+            const wordLetters = currentWord.english.split('');
+            currentLetters = [...wordLetters];
+            
+            for (let i = currentLetters.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [currentLetters[i], currentLetters[j]] = [currentLetters[j], currentLetters[i]];
+            }
+            
+            selectedLetterIndices = [];
+            renderGame();
+            totalWords++;
+            
+            // 限制总场次为10个单词
+            if (totalWords > 10) {
+                totalWords = 10;
+            }
+            
+            updateProgress();
+        }
+
+        // 更新进度条
+        function updateProgress() {
+            const percentage = (correctWords / 10) * 100;
+            progressFillElement.style.width = `${percentage}%`;
+            progressTextElement.textContent = `${correctWords}/10`;
+            
+            // 完成10个单词的挑战
+            if (correctWords >= 10) {
+                setTimeout(() => {
+                    feedbackElement.textContent = "Challenge Completed! 🏆";
+                    playWinAnimation(true);
+                    
+                    // 重置游戏
+                    setTimeout(() => {
+                        correctWords = 0;
+                        totalWords = 0;
+                        usedWords = []; // 重置已使用单词
+                        updateProgress();
+                        nextWord();
+                    }, 3000);
+                }, 1000);
+            }
+        }
+
+        // 渲染游戏界面
+        function renderGame() {
+            // 渲染中文提示
+            chineseHintElement.textContent = currentWord.chinese;
+            
+            // 渲染字母槽
+            letterSlotsElement.innerHTML = '';
+            for (let i = 0; i < currentWord.english.length; i++) {
+                const slot = document.createElement('div');
+                slot.className = 'letter-slot english-text'; // 添加英文字体类
+                
+                // 如果已经选择了字母，显示相应位置的字母
+                if (i < selectedLetterIndices.length) {
+                    const letterIndex = selectedLetterIndices[i];
+                    slot.textContent = currentLetters[letterIndex];
+                }
+                
+                letterSlotsElement.appendChild(slot);
+            }
+            
+            // 渲染字母库
+            letterBankElement.innerHTML = '';
+            for (let i = 0; i < currentLetters.length; i++) {
+                const letter = document.createElement('div');
+                letter.className = 'letter english-text'; // 添加英文字体类
+                letter.textContent = currentLetters[i];
+                
+                // 如果字母已经被选择，添加used类
+                if (selectedLetterIndices.includes(i)) {
+                    letter.classList.add('used');
+                } else {
+                    letter.addEventListener('click', () => selectLetter(i));
+                }
+                
+                letterBankElement.appendChild(letter);
+            }
+        }
+
+        // 选择字母
+        function selectLetter(index) {
+            if (selectedLetterIndices.includes(index)) return;
+            
+            selectedLetterIndices.push(index);
+            renderGame();
+            
+            // 如果所有字母都已选择，自动检查
+            if (selectedLetterIndices.length === currentWord.english.length) {
+                checkAnswer();
+            }
+        }
+
+        // 检查答案
+        function checkAnswer() {
+            const selectedWord = selectedLetterIndices.map(i => currentLetters[i]).join('');
+            
+            if (selectedWord === currentWord.english) {
+                feedbackElement.textContent = "Correct! 🎉";
+                correctSound.play();
+                correctWords++;
+                updateProgress();
+                
+                // 播放胜利动画
+                if (correctWords % 5 === 0) { // 每5个单词正确一次播放更大型的动画
+                    playWinAnimation(true);
+                } else {
+                    playWinAnimation(false);
+                }
+                
+                // 禁用检查和重试按钮
+                checkButton.disabled = true;
+                retryButton.disabled = true;
+                
+                // 2秒后自动进入下一个
+                setTimeout(() => {
+                    nextWord();
+                }, 2000);
+            } else {
+                feedbackElement.textContent = "Try again! 👀";
+                wrongSound.play();
+                setTimeout(() => {
+                    feedbackElement.textContent = "";
+                }, 2000);
+            }
+        }
+
+        // 重置当前单词的选择（重试当前单词）
+        function retryCurrentWord() {
+            selectedLetterIndices = [];
+            renderGame();
+            feedbackElement.textContent = "Let's try again!";
+            setTimeout(() => {
+                feedbackElement.textContent = "";
+            }, 2000);
+        }
+        
+        // 完全重置游戏（清零分数）
+        function resetGame() {
+            correctWords = 0;
+            totalWords = 0;
+            usedWords = []; // 重置已使用单词
+            updateProgress();
+            nextWord();
+            feedbackElement.textContent = "Game reset! Starting fresh.";
+            setTimeout(() => {
+                feedbackElement.textContent = "";
+            }, 2000);
+        }
+
+        // 进入下一个单词
+        function nextWord() {
+            feedbackElement.textContent = "";
+            checkButton.disabled = false;
+            retryButton.disabled = false;
+            selectRandomWord();
+        }
+
+        // 播放胜利动画
+        function playWinAnimation(isLarge) {
+            winAnimationElement.style.display = 'block';
+            winAnimationElement.innerHTML = '';
+            
+            const numFireworks = isLarge ? 50 : 20;
+            
+            for (let i = 0; i < numFireworks; i++) {
+                setTimeout(() => {
+                    const firework = document.createElement('div');
+                    firework.className = 'firework';
+                    
+                    // 随机位置
+                    const x = Math.floor(Math.random() * window.innerWidth);
+                    const y = Math.floor(Math.random() * window.innerHeight);
+                    
+                    // 随机颜色
+                    const hue = Math.floor(Math.random() * 360);
+                    const color = `hsl(${hue}, 100%, 60%)`;
+                    
+                    firework.style.left = `${x}px`;
+                    firework.style.top = `${y}px`;
+                    firework.style.backgroundColor = color;
+                    firework.style.boxShadow = `0 0 10px 5px ${color}`;
+                    
+                    winAnimationElement.appendChild(firework);
+                    
+                    // 添加爆炸动画
+                    firework.animate([
+                        { transform: 'scale(0.1)', opacity: 1 },
+                        { transform: 'scale(2)', opacity: 0 }
+                    ], {
+                        duration: 1000,
+                        easing: 'ease-out'
+                    });
+                    
+                    // 1秒后移除烟花元素
+                    setTimeout(() => {
+                        firework.remove();
+                    }, 1000);
+                }, i * 50);
+            }
+            
+            // 动画结束后隐藏容器
+            setTimeout(() => {
+                winAnimationElement.style.display = 'none';
+            }, numFireworks * 50 + 1000);
+        }
+
+        // 切换数据输入区域的展开/折叠
+        function toggleDataInput() {
+            if (dataInputContent.style.display === 'none') {
+                dataInputContent.style.display = 'flex';
+                dataInputToggle.textContent = '▼';
+            } else {
+                dataInputContent.style.display = 'none';
+                dataInputToggle.textContent = '►';
+            }
+        }
+
+        // 批量添加自定义单词
+        function addCustomWords() {
+            const englishLines = englishInput.value.split('\n').filter(line => line.trim() !== '');
+            const chineseLines = chineseInput.value.split('\n').filter(line => line.trim() !== '');
+            
+            // 检查两列的行数是否匹配
+            if (englishLines.length !== chineseLines.length) {
+                feedbackElement.textContent = "Error: English and Chinese lines don't match!";
+                setTimeout(() => {
+                    feedbackElement.textContent = "";
+                }, 3000);
+                return;
+            }
+            
+            // 清空当前自定义单词
+            customWords = [];
+            
+            // 添加所有单词
+            for (let i = 0; i < englishLines.length; i++) {
+                const english = englishLines[i].trim().toLowerCase();
+                const chinese = chineseLines[i].trim();
+                
+                if (english && chinese) {
+                    customWords.push({ english, chinese });
+                }
+            }
+            
+            // 检查是否有单词被添加
+            if (customWords.length > 0) {
+                usingCustomWords = true;
+                usedWords = []; // 重置已使用单词列表
+                
+                feedbackElement.textContent = `${customWords.length} words added successfully!`;
+                setTimeout(() => {
+                    feedbackElement.textContent = "";
+                }, 2000);
+                
+                // 重置游戏并开始使用新词
+                resetGame();
+            } else {
+                feedbackElement.textContent = "No valid words found. Please check your input.";
+                setTimeout(() => {
+                    feedbackElement.textContent = "";
+                }, 3000);
+            }
+        }
+
+        // 初始化游戏
+        function initGame() {
+            createDecorations();
+            checkNetworkConnection();
+            
+            // 默认折叠数据输入区域
+            dataInputContent.style.display = 'none';
+            dataInputToggle.textContent = '►';
+            
+            // 添加事件监听器
+            soundButton.addEventListener('click', playWordSound);
+            checkButton.addEventListener('click', checkAnswer);
+            retryButton.addEventListener('click', retryCurrentWord); // 新增重试按钮
+            resetButton.addEventListener('click', resetGame);
+            nextButton.addEventListener('click', nextWord);
+            dataInputHeader.addEventListener('click', toggleDataInput);
+            addWordsButton.addEventListener('click', addCustomWords);
+            
+            // 监听网络状态变化
+            window.addEventListener('online', checkNetworkConnection);
+            window.addEventListener('offline', checkNetworkConnection);
+            
+            // 开始第一个单词
+            selectRandomWord();
+        }
+
+        // 启动游戏
+        window.addEventListener('load', initGame);
+    </script>
+</body>
+</html>
